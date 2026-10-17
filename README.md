@@ -1,6 +1,7 @@
 # PS-C1: Tunable H₂ Ground-State VQE Benchmark
 
-**Team:** Quantum Mind  
+**Team Name:** Quantum Mind  
+**Team Lead:** Mohammad Hasan Iqbal  
 **Problem:** Qiskit Fall Fest 2026 Phase 1, PS-C1  
 **Track:** Quantum Chemistry (VQE / ab initio)
 
