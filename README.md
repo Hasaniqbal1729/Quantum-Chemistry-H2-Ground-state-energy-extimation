@@ -4,11 +4,11 @@
 **Problem:** Qiskit Fall Fest 2026 Phase 1, PS-C1  
 **Track:** Quantum Chemistry (VQE / ab initio)
 
-This project adapts the supplied Lab 5 notebook into a reproducible, tunable comparison of a shot-based H₂ VQE workflow on the fixed Processor A and Processor B coupling maps. It includes a runnable notebook, reusable Python modules, architecture JSON, CSV outputs, and a report.
+This project uses the supplied `H2.ipynb` as its algorithm source and adapts its shot-based VQE workflow into a reproducible, tunable comparison on the fixed Processor A and Processor B coupling maps. The unchanged source notebook is preserved as `H2_source.ipynb`; `main.ipynb` adds the architecture benchmark around reusable Python modules. The repository includes architecture JSON, CSV outputs, and a report.
 
 ## Scientific setup
 
-Lab 5 supplies a reduced two-qubit STO-3G Hamiltonian and a one-parameter number-preserving ansatz, estimates Pauli terms with finite shots, optimizes with COBYLA, and compares with exact diagonalization. The Hamiltonian coefficients are documented for **R = 0.735 Å**; this is near the challenge's **0.74 Å** equilibrium. Nuclear repulsion is added to the electronic Hamiltonian so the total energy can be compared with the approximately **−1.137 Hartree** reference. To use exactly 0.740 Å, regenerate the Hamiltonian with Qiskit Nature/PySCF rather than silently treating the supplied coefficients as exact at that geometry.
+`H2.ipynb` supplies a reduced two-qubit STO-3G Hamiltonian and a one-parameter number-preserving ansatz, estimates Pauli terms with finite shots, optimizes with COBYLA, and compares with exact diagonalization. The Hamiltonian coefficients are documented for **R = 0.735 Å**; this is near the challenge's **0.74 Å** equilibrium. Nuclear repulsion is added to the electronic Hamiltonian so the total energy can be compared with the approximately **−1.137 Hartree** reference. To use exactly 0.740 Å, regenerate the Hamiltonian with Qiskit Nature/PySCF rather than silently treating the supplied coefficients as exact at that geometry.
 
 ## Architecture and noise
 
@@ -36,6 +36,7 @@ Tune `config.json` for shots, seeds, optimizer iterations, initial logical-to-ph
 
 ```text
 main.ipynb
+H2_source.ipynb
 config.json
 requirements.txt
 processors/processor_A.json
@@ -51,4 +52,3 @@ report.md
 ```
 
 The results folders start empty and are populated by the notebook/CLI. Energy accuracy, depth, CX count, SWAP count, and physical qubit width are recorded. SWAP gates may be decomposed during transpilation, so the explicit SWAP count can be zero even when routing adds CX gates; compare routed CX count and depth as well.
-

@@ -1,0 +1,13 @@
+{
+  "geometry_angstrom": 0.735,
+  "ansatz": "H2.ipynb two-qubit one-parameter number-preserving ansatz",
+  "shots": 4096,
+  "seed_simulator": 42,
+  "seed_transpiler": 42,
+  "optimization_level": 1,
+  "max_iterations": 45,
+  "initial_theta": 0.0,
+  "initial_layout": [0, 1],
+  "run_noisy": false,
+  "expected_total_energy_hartree": -1.1372701746
+}
