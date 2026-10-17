@@ -2,7 +2,7 @@
 
 ## Method
 
-The notebook follows the supplied Lab 5: a reduced two-qubit H₂ Hamiltonian, a one-parameter number-preserving ansatz, finite-shot Pauli expectation estimates, COBYLA optimization, and exact diagonalization. The electronic Hamiltonian receives the nuclear-repulsion term before reporting total energy. Lab 5's coefficients correspond to 0.735 Å, close to the requested 0.74 Å equilibrium; a 0.740 Å run requires regenerated coefficients.
+The project follows the supplied `H2.ipynb`: a reduced two-qubit H₂ Hamiltonian, a one-parameter number-preserving ansatz, finite-shot Pauli expectation estimates, COBYLA optimization, and exact diagonalization. The source notebook is preserved at `H2_source.ipynb`; the benchmark notebook and reusable modules add Processor A/B routing. The electronic Hamiltonian receives the nuclear-repulsion term before reporting total energy. The supplied coefficients correspond to 0.735 Å, close to the requested 0.74 Å equilibrium; a 0.740 Å run requires regenerated coefficients.
 
 ## Processor comparison
 
