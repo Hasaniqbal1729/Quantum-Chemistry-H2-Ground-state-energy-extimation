@@ -1,0 +1,7 @@
+{
+  "name": "Processor B",
+  "physical_qubits": 9,
+  "basis_gates": ["rz", "sx", "x", "cx"],
+  "coupling_edges": [[0, 1], [1, 2], [1, 6], [2, 3], [2, 6], [2, 5], [3, 4], [4, 5], [5, 6], [6, 7], [6, 8], [8, 0]],
+  "noise": {"status": "unverified; set from official kit before noisy evaluation", "one_qubit_depolarizing": null, "cx_depolarizing": null, "readout_error": null}
+}
